@@ -15,6 +15,7 @@ public class ProductController {
 
     public ProductController(ProductoRepository productoRepository){
          this.productoRepository = productoRepository;
+         System.out.println("Valor");
     }
 
     @PostMapping
@@ -49,5 +50,6 @@ public class ProductController {
     @DeleteMapping("/{id}")
     public void eliminarProducto(@PathVariable Long id){
         productoRepository.deleteById(id);
+        System.out.println("Producto eliminado "+ id);
     }
 }
